@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Series</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid" style="background-color: var(--customHeaderBgColor, #fecc00);">
+            <div class="row align-items-center">
+                <div class="col-2">
+                    <h1>TV Series</h1>
+                </div>
+                <div class="col-4 text-left">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1196/1196944.png" alt="tv" width="50" height="50">
+                </div>
+            </div>
+        </div>
+    </header>
+    <br>
+    <div class="container fluid">
+        <div class="input-group mb-3">
+            <input type="text" id="search-box" class="form-control" placeholder="Buscar por nombre">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="button-filterByName">Buscar</button>
+            </div>
+        </div>
+
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Channel</th>
+                    <th scope="col">Seasons</th>
+                </tr>
+            </thead>
+            <tbody id="series"></tbody>
+        </table>
+
+        <p>Seasons Average: <span id="av-seasons"></span></p>
+    </div>
+
+    <script type="module" src="./scripts/serie.js"></script>
+    <script type="module" src="./scripts/data.js"></script>
+    <script type="module" src="./scripts/main.js"></script>
+</body>
+
+</html>
