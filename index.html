@@ -22,27 +22,42 @@
         </div>
     </header>
     <br>
-    <div class="container fluid">
-        <div class="input-group mb-3">
-            <input type="text" id="search-box" class="form-control" placeholder="Buscar por nombre">
-            <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button" id="button-filterByName">Buscar</button>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="input-group mb-3">
+                    <input type="text" id="search-box" class="form-control" placeholder="Buscar por nombre">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" id="button-filterByName">Buscar</button>
+                    </div>
+                </div>
+
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Channel</th>
+                            <th scope="col">Seasons</th>
+                        </tr>
+                    </thead>
+                    <tbody id="series"></tbody>
+                </table>
+
+                <p>Seasons Average: <span id="av-seasons"></span></p>
+            </div>
+            <div class="col-md-4">
+                <div id="series-detail" class="card" style="display: none;">
+                    <img id="card-img" class="card-img-top" src="" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title" id="card-title">Serie</h5>
+                        <h6 class="card-subtitle mb-2 text-muted" id="card-channel">Canal</h6>
+                        <p class="card-text" id="card-description">Descripción</p>
+                        <a href="#" target="_blank" id="card-link" class="card-link">Ver más</a>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <table class="table">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Channel</th>
-                    <th scope="col">Seasons</th>
-                </tr>
-            </thead>
-            <tbody id="series"></tbody>
-        </table>
-
-        <p>Seasons Average: <span id="av-seasons"></span></p>
     </div>
 
     <script type="module" src="./scripts/serie.js"></script>
